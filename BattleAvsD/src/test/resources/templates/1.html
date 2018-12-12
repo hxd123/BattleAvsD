@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Battle fight between the Autobots and the Deceptions</title>
+    <script type="text/javascript" src="../static/js/local/checking.js"></script>
+</head>
+<body class="body">
+
+<div class="layui-row layui-col-space10 my-index-main">
+
+    <div class="panel panel-widget" id="checkingShow" style="margin:1em 5em 1em 5em">
+        <div class="tables">
+            <div class="form-title">
+                <h4>Transformer Information:</h4>
+            </div>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Strength</th>
+                    <th>Intelligence</th>
+                    <th>Speed</th>
+                    <th>Endurance</th>
+                    <th>Rank</th>
+                    <th>Courage</th>
+                    <th>Firepower</th>
+                    <th>Skill</th>
+                </tr>
+                <tr th:each="info,infoStat : ${Infos}">
+                    <td th:text="${info.name}"></td>
+                    <td th:text="${info.type}"></td>
+                    <th th:text="${info.rankStrength}"></th>
+                    <th th:text="${info.rankIntelligence}"></th>
+                    <th th:text="${info.rankSpeed}"></th>
+                    <th th:text="${info.rankEndurance}"></th>
+                    <th th:text="${info.rankRank}"></th>
+                    <th th:text="${info.rankCourage}"></th>
+                    <th th:text="${info.rankFirepower}"></th>
+                    <th th:text="${info.rankSkill}"></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
